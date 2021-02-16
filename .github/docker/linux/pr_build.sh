@@ -84,7 +84,7 @@ case $PHPS in
 esac
     echo "valgrindissue : $VALGRIND_ISSUE"
 
-if [ "$(uname)" = Linux ] && [ ! -e /etc/alpine-release ] && [ $PHP_SAPIS_EMBED ]; then
+if [ "$(uname)" = Linux ] && [ ! -e /etc/alpine-release ] && [ $PHP_SAPIS_EMBED ] && [ $VALGRIND_ISSUE = 0 ]; then
   do_valgrind=yes
   printf \\n
   printf 'grinding axiom tests\n'
